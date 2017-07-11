@@ -4,12 +4,35 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/find_flight"
+            android:icon="@drawable/ic_aeroplane"
+            android:title="@string/find_a_flight" />
 
+        <item
+            android:id="@+id/book_a_hotel"
+            android:icon="@drawable/ic_hotel"
+            android:title="@string/book_a_hotel" />
+
+        <item
+            android:id="@+id/rent_car"
+            android:icon="@drawable/ic_car"
+            android:title="@string/rent_a_car" />
     </group>
+
+
 
     <item android:title="@string/other">
         <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings" />
 
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_information"
+                android:title="@string/about" />
         </menu>
     </item>
 

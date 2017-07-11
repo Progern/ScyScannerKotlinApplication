@@ -21,7 +21,6 @@ import com.progern.scyscannerapplication.Utils.RC_SIGN_IN
 import com.stephentuso.welcome.WelcomeHelper
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import kotlinx.android.synthetic.main.nav_header_main.*
 import java.util.*
 import android.widget.TextView
 
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        title = "ScyScanner"
+        title = ""
         mWelcomeHelper = WelcomeHelper(this, WelcomeSplashActivity::class.java)
         mWelcomeHelper.show(savedInstanceState)
 

@@ -10,4 +10,8 @@
     <string name="action_settings">Settings</string>
     <string name="settings">Settings</string>
     <string name="other">Other</string>
+    <string name="find_a_flight">Find a flight</string>
+    <string name="book_a_hotel">Book a hotel</string>
+    <string name="rent_a_car">Rent a car</string>
+    <string name="about">About</string>
 </resources>
