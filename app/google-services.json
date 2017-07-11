@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "519860052604",
+    "firebase_url": "https://scyscannerapplication.firebaseio.com",
+    "project_id": "scyscannerapplication",
+    "storage_bucket": "scyscannerapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519860052604:android:3c609ea075846399",
+        "android_client_info": {
+          "package_name": "com.progern.scyscannerapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519860052604-kbgm62jeqnac2n1d9m32ne6osmdrfi7q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.progern.scyscannerapplication",
+            "certificate_hash": "ec1bf553bdc8cec9d1d369f6fd94dcea12500161"
+          }
+        },
+        {
+          "client_id": "519860052604-gt024t3j3a8io28qhv6op3bjamsq4eqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3Sj6l93UzURquPKlZa21gCOHePnDpXnw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519860052604-gt024t3j3a8io28qhv6op3bjamsq4eqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

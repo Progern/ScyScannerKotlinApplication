@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ScyScannerApplication</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu turpis a ipsum maximus fermentum id in arcu. Maecenas varius, elit at faucibus tincidunt, justo odio varius est, in hendrerit leo quam ac nibh. Maecenas vel ligula quis mi consequat volutpat ut vitae tortor. Nunc eu felis eu elit scelerisque dictum a tristique nulla.</string>
+    <string name="sign_out">Sign out</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="settings">Settings</string>
+    <string name="other">Other</string>
 </resources>
