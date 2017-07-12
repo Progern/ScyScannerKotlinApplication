@@ -22,6 +22,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activities.Main.FindFlightsActivity"
+            android:label="@string/title_activity_find_flights"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Main.RentCarActivity"
+            android:label="@string/title_activity_rent_car"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Main.BookHotelsActivity"
+            android:label="@string/title_activity_book_hotels"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.Other.AboutActivity" />
+        <activity android:name=".Activities.Main.SettingsActivity"></activity>
     </application>
 
 </manifest>

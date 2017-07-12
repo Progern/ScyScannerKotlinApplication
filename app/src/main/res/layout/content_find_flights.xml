@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.progern.scyscannerapplication.Activities.Main.FindFlightsActivity"
+    tools:showIn="@layout/activity_find_flights"
+    android:background="@drawable/flights_bg">
+
+    <ImageView
+        android:id="@+id/scyscanner_logo"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:paddingTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/skyscanner_logo"/>
+
+
+    <AutoCompleteTextView
+        android:id="@+id/outbound_location_etx"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/autocomplete_text_bottom_margin"
+        android:layout_marginEnd="@dimen/autocomplete_text_end_margin"
+        android:layout_marginStart="@dimen/autocomplete_text_start_margin"
+        android:layout_marginTop="@dimen/autocomplete_text_top_margin"
+        android:background="@drawable/round_search_box"
+        android:hint="@string/outbound_location"
+        android:lines="1"
+        android:drawableStart="@drawable/ic_departure"
+        android:drawablePadding="5dp"
+        android:layout_below="@id/scyscanner_logo"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/inbound_location_etx"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/autocomplete_text_bottom_margin"
+        android:layout_marginEnd="@dimen/autocomplete_text_end_margin"
+        android:layout_marginStart="@dimen/autocomplete_text_start_margin"
+        android:layout_marginTop="@dimen/autocomplete_text_top_margin"
+        android:layout_toEndOf="@id/outbound_location_etx"
+        android:background="@drawable/round_search_box"
+        android:hint="@string/inbound_location"
+        android:lines="1"
+        android:drawableStart="@drawable/ic_arrival"
+        android:drawablePadding="5dp"
+        android:layout_below="@id/scyscanner_logo"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <TextView
+        android:id="@+id/outbound_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outbound_location_etx"
+        android:text="@string/template_outbound_date_text"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="@dimen/date_text_bottom_margin"
+        android:layout_marginEnd="@dimen/date_text_end_margin"
+        android:layout_marginStart="@dimen/date_text_start_margin"
+        android:layout_marginTop="@dimen/date_text_top_margin"
+        android:background="@drawable/round_search_box"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <TextView
+        android:id="@+id/inbound_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/template_outbound_date_text"
+        android:layout_below="@id/inbound_location_etx"
+        android:textColor="@color/primary_text"
+        android:layout_toEndOf="@id/outbound_date_tv"
+        android:layout_marginBottom="@dimen/date_text_bottom_margin"
+        android:layout_marginEnd="@dimen/date_text_end_margin"
+        android:layout_marginStart="@dimen/date_text_start_margin"
+        android:layout_marginTop="@dimen/date_text_top_margin"
+        android:background="@drawable/round_search_box"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <TextView
+        android:id="@+id/number_of_people_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1_person"
+        android:layout_below="@id/inbound_location_etx"
+        android:textColor="@color/primary_text"
+        android:layout_toEndOf="@id/inbound_date_tv"
+        android:layout_marginBottom="@dimen/date_text_bottom_margin"
+        android:layout_marginEnd="@dimen/date_text_end_margin"
+        android:layout_marginStart="@dimen/date_text_start_margin"
+        android:layout_marginTop="@dimen/date_text_top_margin"
+        android:background="@drawable/round_search_box"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <Button
+        android:layout_width="@dimen/button_size"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:text="@string/search"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@id/number_of_people_tv"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

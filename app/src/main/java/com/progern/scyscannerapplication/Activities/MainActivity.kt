@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
@@ -23,7 +22,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import java.util.*
 import android.widget.TextView
-
+import com.progern.scyscannerapplication.Activities.Main.BookHotelsActivity
+import com.progern.scyscannerapplication.Activities.Main.FindFlightsActivity
+import com.progern.scyscannerapplication.Activities.Main.RentCarActivity
+import com.progern.scyscannerapplication.Activities.Main.SettingsActivity
+import com.progern.scyscannerapplication.Activities.Other.AboutActivity
+import org.jetbrains.anko.intentFor
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -37,9 +41,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener {
-            //TODO: Add search FAB
-        }
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.settings_menu -> {
-                //TODO: Go to settings Activity
+                startActivity(intentFor<SettingsActivity>())
                 return true
             }
             R.id.sign_out_menu -> {
@@ -97,9 +98,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
         when (item.itemId) {
-        //TODO: Handle actions clicks
+            R.id.find_flight -> {
+                startActivity(intentFor<FindFlightsActivity>())
+            }
+
+            R.id.book_a_hotel -> {
+                startActivity(intentFor<BookHotelsActivity>())
+            }
+
+            R.id.rent_car -> {
+                startActivity(intentFor<RentCarActivity>())
+            }
+
+            R.id.settings -> {
+                startActivity(intentFor<SettingsActivity>())
+            }
+
+            R.id.about -> {
+                startActivity(intentFor<AboutActivity>())
+            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
@@ -109,9 +127,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         if (requestCode == RC_SIGN_IN) {
             if (resultCode == Activity.RESULT_OK) {
-                Toast.makeText(this, "Signed in!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Signed up!", Toast.LENGTH_SHORT).show()
             } else if (resultCode == Activity.RESULT_CANCELED) {
-                Toast.makeText(this, "Signed in canceled.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Sign up canceled.", Toast.LENGTH_SHORT).show()
                 finish()
             }
         }
@@ -125,9 +143,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun initAuthListener() {
         mAuthStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
             val user = firebaseAuth.currentUser
-            if (user != null) {
-                Toast.makeText(this, "Welcome to ScyScanner! ", Toast.LENGTH_SHORT).show()
-            } else {
+            if (user == null) {
                 startActivityForResult(
                         AuthUI.getInstance()
                                 .createSignInIntentBuilder()
@@ -153,8 +169,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val email = header.findViewById<View>(R.id.nav_user_email) as TextView
         val avatar = header.findViewById<View>(R.id.nav_user_avatar) as ImageView
 
-        name.text = user?.displayName ?: "Test user"
-        email.text = user?.email ?: "testuser@test.com"
+        name.text = user?.displayName ?: "Anonymous"
+        email.text = user?.email ?: ""
         avatar.setImageURI(user?.photoUrl)
 
     }

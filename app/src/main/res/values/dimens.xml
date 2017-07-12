@@ -5,4 +5,17 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Screen margins for Find cheap flights Activity -->
+    <dimen name="autocomplete_text_top_margin">20dp</dimen>
+    <dimen name="autocomplete_text_bottom_margin">20dp</dimen>
+    <dimen name="autocomplete_text_start_margin">10dp</dimen>
+    <dimen name="autocomplete_text_end_margin">20dp</dimen>
+
+    <dimen name="date_text_top_margin">10dp</dimen>
+    <dimen name="date_text_bottom_margin">10dp</dimen>
+    <dimen name="date_text_start_margin">5dp</dimen>
+    <dimen name="date_text_end_margin">5dp</dimen>
+
+    <dimen name="button_size">250dp</dimen>
 </resources>
